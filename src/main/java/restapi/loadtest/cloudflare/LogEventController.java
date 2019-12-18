@@ -12,6 +12,7 @@ import javax.websocket.server.PathParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -32,7 +33,7 @@ import restapi.loadtest.util.TimeDifference;
  */
 @RestController
 public class LogEventController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(LogEventController.class);
 	public static final int EPS=1;
 	
@@ -55,7 +56,7 @@ public class LogEventController {
 				"/blog/2ebfrb.php?cmdl=dvl-10-for-sale", "1562515844989000000", "8037", "404", "1562515843502000000",
 				"4f2b1715ef80d25a");
 
-		// Start Time -End Time in seconds
+//		 Start Time -End Time in seconds
 		TimeDifference timediff = new TimeDifference();
 
 		seconds = Math.toIntExact(timediff.diffSecInstance(start, end));
