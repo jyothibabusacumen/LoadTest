@@ -32,12 +32,12 @@ public class LogEventTest {
 	
 	//@Autowired
 	private WebApplicationContext wac;
-	
+
 	//@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
 	}
-	
+
 	//@Test
 	public void verifyLogEventGen() {
 		try {
@@ -49,7 +49,7 @@ public class LogEventTest {
 		}
 	}
 	
-	//@Test
+	@Test
 	public void verifyGetZone() {
 		try {
 			MvcResult result=mockMvc.perform(MockMvcRequestBuilders.get("/client/v4/zones").accept(MediaType.APPLICATION_JSON)).andReturn();

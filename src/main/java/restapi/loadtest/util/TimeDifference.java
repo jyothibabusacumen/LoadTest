@@ -1,5 +1,7 @@
 package restapi.loadtest.util;
 
+import org.springframework.stereotype.Service;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
